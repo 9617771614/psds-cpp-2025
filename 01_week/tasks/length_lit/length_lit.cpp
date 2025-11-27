@@ -1,9 +1,9 @@
 constexpr double operator"" _ft_to_m(long double x) {
-    return x * 0.3048; // преобразование фт в метры 
+    return x / 100 * 12 * 2.54; // преобразование фт в метры 
 }
 
 constexpr double operator"" _ft_to_cm(long double x) {
-    return x * 30.48; // преобразование фт в см 
+    return x * 2.54 * 12; // преобразование фт в см 
 }
 
 constexpr double operator"" _ft_to_in(long double x) {
@@ -13,7 +13,7 @@ constexpr double operator"" _ft_to_in(long double x) {
 
 //Дюймы
 constexpr double operator"" _in_to_m(long double x) {
-    return x * 0.0254; //  
+    return x / 100 * 2.54; //  
 }
 
 constexpr double operator"" _in_to_cm(long double x) {
@@ -27,7 +27,7 @@ constexpr double operator"" _in_to_ft(long double x) {
 
 //Метры
 constexpr double operator"" _m_to_ft(long double x) {
-    return x * 3.28084; //  
+    return x / 100 * 2.54 * 12; //  
 }
 
 constexpr double operator"" _m_to_cm(long double x) {
@@ -51,3 +51,4 @@ constexpr double operator"" _cm_to_m(long double x) {
 constexpr double operator"" _cm_to_in(long double x) {
     return x * 2.54; // 
 }
+
