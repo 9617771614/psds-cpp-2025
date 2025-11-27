@@ -76,5 +76,5 @@ void PrintCheckFlags(CheckFlags flags) {
     }
     
     buf[i] = ']';
-    std::cout << "\r\n buf = "<< buf; 
+    std::cout << buf; 
 }
