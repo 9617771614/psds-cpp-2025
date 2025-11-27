@@ -63,7 +63,7 @@ void PrintCheckFlags(CheckFlags flags) {
                     i++;
                 } 
                 
-                buf[i++] = 'K'; buf[i++] = 'E'; buf[i++] = 'U'; buf[i++] = 'S';
+                buf[i++] = 'K'; buf[i++] = 'E'; buf[i++] = 'Y'; buf[i++] = 'S';
             } 
             if(data & static_cast<uint8_t>(CheckFlags::DEST)){
                 if(buf[i-1] != '['){
