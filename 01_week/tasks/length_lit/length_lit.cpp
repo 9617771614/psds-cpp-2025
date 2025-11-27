@@ -35,13 +35,13 @@ constexpr double operator"" _m_to_cm(long double x) {
 }
 
 constexpr double operator"" _m_to_in(long double x) {
-    return x * 3.28084 * 12; // 
+    return x / 100 * 2.54; // 
 }
 
 
 //см
 constexpr double operator"" _cm_to_ft(long double x) {
-    return x * 0.0328084; //  
+    return x / 12 / 2.54; //  
 }
 
 constexpr double operator"" _cm_to_m(long double x) {
@@ -51,4 +51,5 @@ constexpr double operator"" _cm_to_m(long double x) {
 constexpr double operator"" _cm_to_in(long double x) {
     return x * 2.54; // 
 }
+
 
