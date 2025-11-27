@@ -25,15 +25,3 @@ constexpr double operator"" _in_to_ft(long double x) {
 }
 
 
-//Дюймы
-constexpr double operator"" _in_to_m(long double x) {
-    return x * 0.0254; //  
-}
-
-constexpr double operator"" _in_to_cm(long double x) {
-    return x * 2.54; // 
-}
-
-constexpr double operator"" _in_to_ft(long double x) {
-    return x / 12; // 
-}
