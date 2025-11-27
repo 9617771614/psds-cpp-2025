@@ -5,9 +5,9 @@
 size_t CharChanger(char array[], size_t size, char delimiter) {
 
     char symbol;             // Актуальный символ.
-    char prevSymbol;         // Предыдущий символ
-    char newSymbol = 0;      // Новый символ 
-    size_t i = 0;            // счетчик
+    char prevSymbol;         // Предыдущий символ.
+    char newSymbol = 0;      // Новый символ.
+    size_t i = 0;            // счетчик.
     size_t j = 0;            // счетчик итераций для индексации элементов обновленного массива.
     char numMatch = 0;
     prevSymbol = ~array[i];
