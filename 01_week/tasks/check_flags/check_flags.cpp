@@ -1,11 +1,7 @@
 #include <cstdint>
 #include <stdexcept>
 
-constexpr CheckFlags operator|(CheckFlags lhs, CheckFlags rhs) {
-    return static_cast<CheckFlags>(
-        static_cast<uint8_t>(lhs) | static_cast<uint8_t>(rhs)
-    );
-}
+
 enum class CheckFlags : uint8_t {
     NONE = 0,
     TIME = (1 << 0),
@@ -17,6 +13,11 @@ enum class CheckFlags : uint8_t {
     ALL = TIME | DATE | USER | CERT | KEYS | DEST
 };
 
+constexpr CheckFlags operator|(CheckFlags lhs, CheckFlags rhs) {
+    return static_cast<CheckFlags>(
+        static_cast<uint8_t>(lhs) | static_cast<uint8_t>(rhs)
+    );
+}
 void PrintCheckFlags(CheckFlags flags) {
     
     char buf[40] = {'\0'};
