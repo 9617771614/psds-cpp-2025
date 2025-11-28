@@ -1,8 +1,8 @@
 
 // Константы для преобразования
-#define IN_TO_CM = 2.54
-#define FT_TO_IN = 12.0
-#define M_TO_CM = 100.0
+#define IN_TO_CM 2.54
+#define FT_TO_IN 12.0
+#define M_TO_CM 100.0
 
 
 constexpr double operator"" _ft_to_m(long double x) {
@@ -57,6 +57,7 @@ constexpr double operator"" _cm_to_m(long double x) {
 constexpr double operator"" _cm_to_in(long double x) {
     return static_cast<double>(x * IN_TO_CM); // 
 }
+
 
 
 
