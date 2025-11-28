@@ -37,7 +37,7 @@ constexpr double operator"" _m_to_ft(long double x) {
 }
 
 constexpr double operator"" _m_to_cm(long double x) {
-    return static_cast<double>( x / M_TO_CM); // 
+    return static_cast<double>( x * M_TO_CM); // 
 }
 
 constexpr double operator"" _m_to_in(long double x) {
@@ -57,6 +57,7 @@ constexpr double operator"" _cm_to_m(long double x) {
 constexpr double operator"" _cm_to_in(long double x) {
     return static_cast<double>(x / IN_TO_CM); // 
 }
+
 
 
 
