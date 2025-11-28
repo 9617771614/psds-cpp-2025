@@ -1,5 +1,6 @@
 #include <stdexcept>
-
+#include <iomanip>
+#include <iostream>
 
 void SolveQuadratic(int a, int b, int c) {
     float x1 = 0.0; // Превый корень уравнения
