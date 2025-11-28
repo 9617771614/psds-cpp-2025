@@ -25,6 +25,13 @@ void SolveQuadratic(int a, int b, int c) {
         return;
     }
     
+    // Если x = 0 
+    if(((a == 0) && (c == 0)) || ((b == 0) && (c == 0)))
+    {
+        std::cout <<"0";
+        return;
+    }
+    
     
     if(a == 0)  // Своего рода ускорение вычисления при a равном нулю
     {
