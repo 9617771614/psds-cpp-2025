@@ -1,7 +1,7 @@
 #include <stdexcept>
 
 
-void SwapPtr(int* a, int* b) {
+void SwapPointers(int* a, int* b) {
     int *c;
     c = a;
     a = b;
