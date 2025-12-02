@@ -1,9 +1,9 @@
 #include <stdexcept>
 
 
-void SwapPointers(int* a, int* b) {
-    int *c;
-    c = a;
+template<typename T>
+void SwapPointers(T*& a, T*& b) noexcept {
+    T* temp = a;
     a = b;
-    b = c;
+    b = temp;
 }
