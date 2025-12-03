@@ -146,7 +146,7 @@ TEST(LongestSubsequenceTest, MutableString) {
     std::string str = "aaabbbccc";
     size_t count = 0;
     
-    const char* result = FindLongestSubsequence(str.data(), str.data() + str.size(), count);
+    char* result = FindLongestSubsequence(str.data(), str.data() + str.size(), count);
     
     ASSERT_NE(result, nullptr);
     EXPECT_EQ(count, 3);
