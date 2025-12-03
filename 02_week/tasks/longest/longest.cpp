@@ -1,7 +1,7 @@
 #include <stdexcept>
 
 
-const char* FindLongestSubsequence(char* begin, char* end, size_t& count){
+const char* FindLongestSubsequence(const char* begin, const char* end, size_t& count){
     count = 0;
     if(begin == nullptr ) return nullptr ;  // Проверка корректности указателя на начало.
     if(end == nullptr ) return nullptr ;    // Проверка корректности указателя на конец.
