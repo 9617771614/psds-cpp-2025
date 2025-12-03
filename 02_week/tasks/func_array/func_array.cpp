@@ -1,5 +1,6 @@
 #include <stdexcept>
 
+using FuncTypeTest = double (*)(double, double);
 
 double ApplyOperations(double a, double b, FuncTypeTest operations[], size_t size) {
     if (operations == nullptr || size == 0) {    // Если указатель на nullptr или нулевой размер массива функций то -ошибка возвращаем 0
