@@ -43,5 +43,5 @@ char* FindLongestSubsequence( char* begin,  char* end, size_t& count){
     
     
     
-    return resultPtr;   // вывод результата.
+    return const_cast  <char*>(resultPtr);
 }
