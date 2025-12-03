@@ -1,16 +1,17 @@
 #include <stdexcept>
 
 
-char* FindLongestSubsequence( char* begin,  char* end, size_t& count){
+char* FindLongestSubsequence(const char* begin, const char* end, size_t& count){
     count = 0;
     if(begin == nullptr ) return nullptr ;  // Проверка корректности указателя на начало.
     if(end == nullptr ) return nullptr ;    // Проверка корректности указателя на конец.
     if(begin >= end) return nullptr;     // char имеет размер 1 байт, end должен быть больше чем begin минимум на 1
     // Проерки пройдены. работаем дальше.
     
-     char* ptr = begin;
-     char* resultPtr = begin ;
-     char* beginningSequence = ptr;
+    char* ptr = const_cast  <char*>(begin);
+    char* resultPtr =  ptr;
+    char* beginningSequence = ptr;
+    
     size_t countSequence = 1;
     count = 1;
     while(ptr < end)    // пока адрес анализируемой переменной меньше адреса последней переменной.
@@ -43,5 +44,5 @@ char* FindLongestSubsequence( char* begin,  char* end, size_t& count){
     
     
     
-    return const_cast  <char*>(resultPtr);
+    return resultPtr;
 }
