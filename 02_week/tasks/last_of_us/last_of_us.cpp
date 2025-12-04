@@ -11,7 +11,7 @@ const int* FindLastElement(const int* begin, const int* end, bool (*predicate)(i
     
     // Т.к. задача найти последний элемент массива, который удовлетворяя условию, то можно проверять от последнего элемента к первому. Соответственно, как только найден элемент удовлетворяющий условию, выходим, иначе возвращается указатель на последний элемент. 
     while(ptr >= begin){
-        if(predicate(*ptr)) return = ptr;
+        if(predicate(*ptr)) return ptr;
         
         ptr--;
     }
