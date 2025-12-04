@@ -1,6 +1,21 @@
 #include <stdexcept>
 
-
-/* return_type */ FindLastElement(/* ptr_type */ begin, /* ptr_type */ end, /* func_type */ predicate) {
-    throw std::runtime_error{"Not implemented"};
+const int* FindLastElement(const int* begin, const int* end, bool (*predicate)(int))
+{   
+    if(begin == nullptr)    return end; // Проверка корректности адреса начала массива. 
+    if(end == nullptr)      return end; // Проверка корректности адреса конца массива. 
+    if(begin >= end)        return end; // Проверка корректности, адрес начала массива должен быть меньше чем адрес конца массива. 
+    
+ //   const int* result = end;
+    const int* ptr = begin;     // Инициализируем адрес на проверяемый элемент массива. 
+    
+    // Т.к. задача найти последний элемент массива, который удовлетворяя условию, то можно проверять от последнего элемента к первому. Соответственно, как только найден элемент удовлетворяющий условию, выходим, иначе возвращается указатель на последний элемент. 
+    while(ptr >= begin){
+        if(predicate(*ptr)) return = ptr;
+        
+        ptr--;
+    }
+    
+    return end;    //Элемент, удовлетворяющий условию не найден. Возвращаем указатель на конец массива. 
+    
 }
