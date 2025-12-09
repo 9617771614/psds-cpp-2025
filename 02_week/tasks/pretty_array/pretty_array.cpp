@@ -1,7 +1,7 @@
 #include <stdexcept>
 
 
-void PrintArray(const int* ptrA, const int* ptrB, size_t lim){
+void PrintArray(const int* ptrA, const int* ptrB, size_t lim = 0){
     size_t len = 0;     // количество выводимых элементов 
     
     // проверка валидности адресов
