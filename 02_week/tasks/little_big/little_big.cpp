@@ -5,7 +5,7 @@
 void PrintingFunc(unsigned char* ptr, size_t size,  bool orientation)
 {
     char tempL, tempR;
-    size_t i = 0; 
+//    size_t i = 0; 
     char buf[size * 2];
 
     for(size_t i = 0; i < size; i++)
