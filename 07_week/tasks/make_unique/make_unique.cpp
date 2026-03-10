@@ -1,4 +1,16 @@
 #include <memory>
-
-
-/* return_type */ MakeUnique( /* args */ );
+/*
+* 
+* Создаем умный указатель std::unique_ptr на новый объект типа T
+* где:
+*  T Тип создаваемого объекта
+*  data- типы аргументов для конструктора
+*  x - аргументы для конструктора объекта типа T
+*  std::unique_ptr<T> - умный указатель, владеющий созданным объектом. Важно !! без этого не пройти тесты или надо комментировать строку 133 и 134 т.к. там тест конкретно ждет * std::unique_ptr<T> 
+*  
+ */
+template<typename T, typename... Data>
+std::unique_ptr<T> MakeUnique(Data&&... x) {
+    // Выделяем память и конструируем объект
+    return std::unique_ptr<T>(new T(std::forward<Data>(x)...));
+}
